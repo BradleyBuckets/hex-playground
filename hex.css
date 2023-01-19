@@ -175,7 +175,7 @@
   display: flex;
 }
 
-.hex-container {
+.hex-con {
   /* margin: auto; */
   display: flex;
   text-align: initial;
@@ -259,125 +259,14 @@
   display: flex;
   justify-content: space-around;
 }
-/* large */
 
-.hex-con-lg,
-.hex-con-b,
-.hex-con-h,
-.hex-con-lgp,
-.hex-con-butter {
+.hex-container {
   height: calc(var(--hex-size) * 1.1);
   width: calc(var(--hex-size) * 1.1);
 }
-.hex-lg {
-  position: relative;
-  width: calc(var(--hex-size) * 0.65);
-  height: var(--hex-size);
-  margin: auto;
-  background-color: steelblue;
-  border-radius: calc((var(--hex-size) / 10));
-}
-
-.hex-lg:before,
-.hex-lg:after {
-  position: absolute;
-  content: "";
-  background: inherit;
-  height: 100%;
-  width: 100%;
-  border-radius: inherit;
-  transform-origin: center;
-}
-.hex-lg:before {
-  transform: rotate(60deg);
-}
-.hex-lg:after {
-  transform: rotate(-60deg);
-}
-
-/* a lot of radius */
-.hex-b {
-  position: relative;
-  width: calc(var(--hex-size) * 0.73);
-  height: var(--hex-size);
-  margin: auto;
-  background-color: pink;
-  border-radius: calc((var(--hex-size) / 5));
-}
-
-.hex-b:before,
-.hex-b:after {
-  position: absolute;
-  content: "";
-  background: inherit;
-  height: 100%;
-  width: 100%;
-  border-radius: inherit;
-  transform-origin: center;
-}
-.hex-b:before {
-  transform: rotate(60deg);
-}
-.hex-b:after {
-  transform: rotate(-60deg);
-}
-
-/* half the of radius */
-.hex-h {
-  position: relative;
-  width: calc(var(--hex-size) * 0.615);
-  height: var(--hex-size);
-  margin: auto;
-  background-color: goldenrod;
-  border-radius: calc((var(--hex-size) / 20));
-}
-
-.hex-h:before,
-.hex-h:after {
-  position: absolute;
-  content: "";
-  background: inherit;
-  height: 100%;
-  width: 100%;
-  border-radius: inherit;
-  transform-origin: center;
-}
-.hex-h:before {
-  transform: rotate(60deg);
-}
-.hex-h:after {
-  transform: rotate(-60deg);
-}
-
-/* no border radius */
-.hex-lgp {
-  position: relative;
-  width: calc(var(--hex-size) * 0.58);
-  height: var(--hex-size);
-  margin: auto;
-  background-color: teal;
-  border-radius: calc((var(--hex-size) / 225));
-}
-
-.hex-lgp:before,
-.hex-lgp:after {
-  position: absolute;
-  content: "";
-  background: inherit;
-  height: 100%;
-  width: 100%;
-  border-radius: inherit;
-  transform-origin: center;
-}
-.hex-lgp:before {
-  transform: rotate(60deg);
-}
-.hex-lgp:after {
-  transform: rotate(-60deg);
-}
 
 /* butterfly hexagon */
-.hex-butter {
+.hex-b {
   position: relative;
   width: calc(var(--hex-size) * 0.58);
   height: var(--hex-size);
@@ -386,8 +275,36 @@
   border-radius: calc(var(--hex-size) / 3);
 }
 
-.hex-butter:before,
-.hex-butter:after {
+.hex-b:before,
+.hex-b:after {
+  position: absolute;
+  content: "";
+  background-color: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  transform-origin: center;
+  border: inherit;
+}
+.hex-b:before {
+  transform: rotate(60deg);
+}
+.hex-b:after {
+  transform: rotate(-60deg);
+}
+
+/* a lot of radius */
+.hex-l {
+  position: relative;
+  width: calc(var(--hex-size) * 0.73);
+  height: var(--hex-size);
+  margin: auto;
+  background-color: pink;
+  border-radius: calc((var(--hex-size) / 5));
+}
+
+.hex-l:before,
+.hex-l:after {
   position: absolute;
   content: "";
   background: inherit;
@@ -395,11 +312,90 @@
   width: 100%;
   border-radius: inherit;
   transform-origin: center;
-  border: inherit;
 }
-.hex-butter:before {
+.hex-l:before {
   transform: rotate(60deg);
 }
-.hex-butter:after {
+.hex-l:after {
+  transform: rotate(-60deg);
+}
+
+/* medium border hex */
+.hex-m {
+  position: relative;
+  width: calc(var(--hex-size) * 0.65);
+  height: var(--hex-size);
+  margin: auto;
+  background-color: steelblue;
+  border-radius: calc((var(--hex-size) / 10));
+}
+.hex-m:before,
+.hex-m:after {
+  position: absolute;
+  content: "";
+  background-color: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  transform-origin: center;
+}
+.hex-m:before {
+  transform: rotate(60deg);
+}
+.hex-m:after {
+  transform: rotate(-60deg);
+}
+
+/* half the of radius */
+.hex-s {
+  position: relative;
+  width: calc(var(--hex-size) * 0.615);
+  height: var(--hex-size);
+  margin: auto;
+  background-color: goldenrod;
+  border-radius: calc((var(--hex-size) / 20));
+}
+
+.hex-s:before,
+.hex-s:after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  transform-origin: center;
+}
+.hex-s:before {
+  transform: rotate(60deg);
+}
+.hex-s:after {
+  transform: rotate(-60deg);
+}
+
+/* no border radius */
+.hex-n {
+  position: relative;
+  width: calc(var(--hex-size) * 0.58);
+  height: var(--hex-size);
+  margin: auto;
+  background-color: teal;
+  border-radius: calc((var(--hex-size) / 225));
+}
+
+.hex-n:before,
+.hex-n:after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  transform-origin: center;
+}
+.hex-n:before {
+  transform: rotate(60deg);
+}
+.hex-n:after {
   transform: rotate(-60deg);
 }
