@@ -124,25 +124,19 @@
 .hexagon-butter {
   position: relative;
   width: 46%;
+  /* used with no border radius */
+  width: 50%;
+  /* used with 2 border radius */
   height: 80%;
   margin: auto;
   color: purple;
   background: blue;
+  border-radius: 10px;
   /* background: linear-gradient(-180deg, purple, #fda3b2); */
   display: flex;
   align-content: center;
   justify-content: center;
   transition: 0.5s;
-}
-
-.hexagon-butter i {
-  /* z-index: 1; */
-  margin: auto;
-  font-size: 50px;
-  color: transparent;
-  background: linear-gradient(45deg, #a58fe9, #e37682);
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .hexagon-butter:before,
@@ -152,7 +146,7 @@
   background: inherit;
   height: 100%;
   width: 100%;
-  border-radius: 0;
+  border-radius: inherit;
   transition: 0.5s;
   transform-origin: center;
 }
@@ -163,15 +157,249 @@
   transform: rotate(-60deg);
 }
 .hexagon-butter:hover {
-  transform: rotate(60deg);
-  border-radius: 50px;
+  transform: rotate(30deg);
+  /* border-radius: 50px; */
   transition: 0.5s;
 }
-.hexagon-butter:hover:before {
+/* .hexagon-butter:hover:before {
   border-radius: 50px;
   transition: 0.5s;
 }
 .hexagon-butter:hover:after {
   border-radius: 50px;
   transition: 0.5s;
+} */
+
+/* hex grid */
+.hex-grid {
+  display: flex;
+}
+
+.hex-container {
+  /* margin: auto; */
+  display: flex;
+  text-align: initial;
+  width: 200px;
+  height: 200px;
+}
+
+.hex-but {
+  position: relative;
+  width: 46%;
+  /* used with no border radius */
+  height: 80%;
+  margin: auto;
+  background: blue;
+  /* background: linear-gradient(-180deg, purple, #fda3b2); */
+}
+
+.hex-but:before,
+.hex-but:after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  transform-origin: center;
+}
+.hex-but:before {
+  transform: rotate(60deg);
+}
+.hex-but:after {
+  transform: rotate(-60deg);
+}
+.hex-con {
+  /* margin: auto; */
+  display: flex;
+  text-align: initial;
+  width: 200px;
+  height: 200px;
+}
+
+.hex-new {
+  position: relative;
+  width: calc(150px * 0.645);
+  height: 150px;
+  margin: auto;
+  background-color: teal;
+  border-radius: calc((150px / 10));
+  transform: rotate(90deg);
+}
+
+.hex-new:before,
+.hex-new:after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  transform-origin: center;
+}
+.hex-new:before {
+  transform: rotate(60deg);
+}
+.hex-new:after {
+  transform: rotate(-60deg);
+}
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+:root {
+  --hex-size: 200px;
+}
+.display {
+  display: flex;
+  justify-content: space-around;
+}
+/* large */
+
+.hex-con-lg,
+.hex-con-b,
+.hex-con-h,
+.hex-con-lgp,
+.hex-con-butter {
+  height: calc(var(--hex-size) * 1.1);
+  width: calc(var(--hex-size) * 1.1);
+}
+.hex-lg {
+  position: relative;
+  width: calc(var(--hex-size) * 0.65);
+  height: var(--hex-size);
+  margin: auto;
+  background-color: steelblue;
+  border-radius: calc((var(--hex-size) / 10));
+}
+
+.hex-lg:before,
+.hex-lg:after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  transform-origin: center;
+}
+.hex-lg:before {
+  transform: rotate(60deg);
+}
+.hex-lg:after {
+  transform: rotate(-60deg);
+}
+
+/* a lot of radius */
+.hex-b {
+  position: relative;
+  width: calc(var(--hex-size) * 0.73);
+  height: var(--hex-size);
+  margin: auto;
+  background-color: pink;
+  border-radius: calc((var(--hex-size) / 5));
+}
+
+.hex-b:before,
+.hex-b:after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  transform-origin: center;
+}
+.hex-b:before {
+  transform: rotate(60deg);
+}
+.hex-b:after {
+  transform: rotate(-60deg);
+}
+
+/* half the of radius */
+.hex-h {
+  position: relative;
+  width: calc(var(--hex-size) * 0.615);
+  height: var(--hex-size);
+  margin: auto;
+  background-color: goldenrod;
+  border-radius: calc((var(--hex-size) / 20));
+}
+
+.hex-h:before,
+.hex-h:after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  transform-origin: center;
+}
+.hex-h:before {
+  transform: rotate(60deg);
+}
+.hex-h:after {
+  transform: rotate(-60deg);
+}
+
+/* no border radius */
+.hex-lgp {
+  position: relative;
+  width: calc(var(--hex-size) * 0.58);
+  height: var(--hex-size);
+  margin: auto;
+  background-color: teal;
+  border-radius: calc((var(--hex-size) / 225));
+}
+
+.hex-lgp:before,
+.hex-lgp:after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  transform-origin: center;
+}
+.hex-lgp:before {
+  transform: rotate(60deg);
+}
+.hex-lgp:after {
+  transform: rotate(-60deg);
+}
+
+/* butterfly hexagon */
+.hex-butter {
+  position: relative;
+  width: calc(var(--hex-size) * 0.58);
+  height: var(--hex-size);
+  margin: auto;
+  background-color: darkred;
+  border-radius: calc(var(--hex-size) / 3);
+}
+
+.hex-butter:before,
+.hex-butter:after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  transform-origin: center;
+  border: inherit;
+}
+.hex-butter:before {
+  transform: rotate(60deg);
+}
+.hex-butter:after {
+  transform: rotate(-60deg);
 }
